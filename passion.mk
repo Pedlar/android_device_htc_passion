@@ -29,7 +29,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=200 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
-    wifi.supplicant_scan_interval=15
+    wifi.supplicant_scan_interval=15 \
+    ro.ril.hsxpa=2 \
+    ro.ril.gprsclass=10
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -43,7 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+    dalvik.vm.heapsize=48m
 
 
 ## (2) Also get non-open-source GSM-specific aspects if available
