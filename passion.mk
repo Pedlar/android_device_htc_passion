@@ -26,7 +26,7 @@ PRODUCT_COPY_FILES := \
     device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=200 \
+    ro.sf.lcd_density=220 \
     rild.libpath=/system/lib/libhtc_ril.so \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15 \
