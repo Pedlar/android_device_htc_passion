@@ -48,10 +48,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=48m
 
-# Disable visual strict mode, even on eng builds
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.strictmode.visual=0
-
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
 
