@@ -33,10 +33,10 @@ PRODUCT_VERSION_DEVICE_SPECIFIC := -drewis
 
 #Get eng stuff on our userdebug builds
     # Turn on checkjni for non-user builds.
-ADDITIONAL_BUILD_PROPERTIES_OVERIDES += ro.kernel.android.checkjni=1
+ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
     # Set device insecure for non-user builds.
-ADDITIONAL_DEFAULT_PROPERTIES_OVERIDES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
     # Allow mock locations by default for non user builds
-ADDITIONAL_DEFAULT_PROPERTIES_OVERRIDES += ro.allow.mock.location=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
     # Disable visual strict mode, even on eng builds
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.strictmode.visual=0
+PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
