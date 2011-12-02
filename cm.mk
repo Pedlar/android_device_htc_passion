@@ -26,10 +26,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Release name and versioning
 PRODUCT_RELEASE_NAME := N1
 PRODUCT_VERSION_DEVICE_SPECIFIC := -drewis
--include vendor/cm/config/common_versions.mk
 
-#PRODUCT_PACKAGES += \
-#    Camera
+PRODUCT_PACKAGES += \
+    Camera
 
 #Get eng stuff on our userdebug builds
     # Turn on checkjni for non-user builds.

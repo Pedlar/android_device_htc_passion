@@ -23,8 +23,8 @@
 
 PRODUCT_COPY_FILES := \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
-    device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \
-    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
+    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc \
+    #device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \ #doesnt work yet kernel mod needs to be made
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
