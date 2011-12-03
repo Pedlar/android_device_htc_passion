@@ -30,6 +30,17 @@ PRODUCT_VERSION_DEVICE_SPECIFIC := -drewis
 PRODUCT_PACKAGES += \
     Camera
 
+#Temp packages
+PRODUCT_PACKAGES += \
+    bash \
+    vim \
+    nano \
+    libncurses \
+    ssh \
+    rsync \
+    Stk \
+    CMSettings
+
 #Get eng stuff on our userdebug builds
     # Turn on checkjni for non-user builds.
 ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1

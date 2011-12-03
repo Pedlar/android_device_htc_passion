@@ -22,3 +22,4 @@
 
 add_lunch_combo full_passion-userdebug
 add_lunch_combo full_passion-eng
+add_lunch_combo cm_passion-userdebug
