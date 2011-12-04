@@ -24,7 +24,7 @@
 PRODUCT_COPY_FILES := \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc \
-    #device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \ #doesnt work yet kernel mod needs to be made
+    device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
@@ -46,11 +46,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=48m
+    dalvik.vm.startheapsize=48m \
+    dalvik.vm.heapsize=64m
 
 #Disable HWAccel for now
-PRODUCT_PROPERTY_OVERIDES += \
-    ro.config.disable_hw_accel=true
+#PRODUCT_PROPERTY_OVERIDES += \
+#    ro.config.disable_hw_accel=true
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)

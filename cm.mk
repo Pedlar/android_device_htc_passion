@@ -50,3 +50,5 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
 ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
     # Disable visual strict mode, even on eng builds
 PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
+
+#ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
