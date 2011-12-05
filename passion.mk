@@ -46,12 +46,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.startheapsize=48m \
-    dalvik.vm.heapsize=64m
+    dalvik.vm.heapsize=48m
 
 #Disable HWAccel for now
-#PRODUCT_PROPERTY_OVERIDES += \
-#    ro.config.disable_hw_accel=true
+PRODUCT_PROPERTY_OVERIDES += \
+    ro.config.disable_hw_accel=true
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
