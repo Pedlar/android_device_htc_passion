@@ -1,0 +1,5 @@
+on boot
+
+# Run sysinit
+    exec /system/bin/sysinit
+

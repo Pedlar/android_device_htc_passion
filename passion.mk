@@ -37,7 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # Default network type.
 # 0 => WCDMA preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=0
+    ro.telephony.default_network=3 #0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -49,11 +49,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=48m
 
 #Disable HWAccel for now
-PRODUCT_PROPERTY_OVERIDES += \
+ADDITIONAL_PRODUCT_PROPERTYS += \
     ro.config.disable_hw_accel=true
 
 #tryout ril workaround
-PRODUCT_PROPERTY_OVERIDES += \
+ADDITIONAL_PRODUCT_PROPERTYS += \
     ro.telephony.ril.v3=skipbrokendatacall
 
 ## (2) Also get non-open-source GSM-specific aspects if available

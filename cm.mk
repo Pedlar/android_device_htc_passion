@@ -25,7 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Release name and versioning
 PRODUCT_RELEASE_NAME := N1
-PRODUCT_VERSION_DEVICE_SPECIFIC := -drewis
+PRODUCT_VERSION_DEVICE_SPECIFIC := -drewis-$(shell date +%m%d%Y)
 
 PRODUCT_PACKAGES += \
     Camera
@@ -54,5 +54,8 @@ PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
 
-#Nexus One bootanimation is cooler
-PRODUCT_COPY_FILES += device/htc/passion/nexus-bootanimation.zip:system/media/bootanimation.zip
+#My extras
+$(call inherit-product-if-exists, device/htc/passion/extras/extras.mk)
+
+#Get some Gapps 
+$(call inherit-product-if-exists, gapps/gapps.mk)
