@@ -52,6 +52,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
 PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
 
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
+#ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
 
 #Nexus One bootanimation is cooler
 PRODUCT_COPY_FILES += device/htc/passion/nexus-bootanimation.zip:system/media/bootanimation.zip

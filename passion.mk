@@ -23,8 +23,8 @@
 
 PRODUCT_COPY_FILES := \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
-    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc \
-    device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc
+    device/htc/passion/init.mahimahi.usb.rc:root/init.mahimahi.usb.rc \
+    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
@@ -51,6 +51,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Disable HWAccel for now
 PRODUCT_PROPERTY_OVERIDES += \
     ro.config.disable_hw_accel=true
+
+#tryout ril workaround
+PRODUCT_PROPERTY_OVERIDES += \
+    ro.telephony.ril.v3=skipbrokendatacall
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
