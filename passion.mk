@@ -49,11 +49,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=48m
 
 #Disable HWAccel for now
-ADDITIONAL_PRODUCT_PROPERTYS += \
+ADDITIONAL_BUILD_PROPERTIES += \
     ro.config.disable_hw_accel=true
 
 #tryout ril workaround
-ADDITIONAL_PRODUCT_PROPERTYS += \
+ADDITIONAL_BUILD_PROPERTIES += \
     ro.telephony.ril.v3=skipbrokendatacall
 
 ## (2) Also get non-open-source GSM-specific aspects if available
