@@ -32,14 +32,10 @@ PRODUCT_PACKAGES += \
 
 #Temp packages
 PRODUCT_PACKAGES += \
-    bash \
-    vim \
-    nano \
-    libncurses \
-    ssh \
-    rsync \
-    Stk \
-    CMSettings
+    bash vim nano libncurses ssh rsync \
+    Stk CMSettings \
+    e2fsck resize2fs e2fsck \
+    libext2_com_err libext2_profile libext2_blkid libext2_e2p libext2_uuid libext2fs
 
 #Get eng stuff on our userdebug builds
     # Turn on checkjni for non-user builds.
@@ -58,4 +54,4 @@ PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
 $(call inherit-product-if-exists, device/htc/passion/extras/extras.mk)
 
 #Get some Gapps 
-$(call inherit-product-if-exists, gapps/gapps.mk)
+#$(call inherit-product-if-exists, gapps/gapps.mk)

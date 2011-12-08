@@ -19,6 +19,9 @@ on post-fs-data
 on boot
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
+    #genlock FIXME
+    #chmod 0777 /dev/genlock
+    
     # bluetooth power up/down interface
     chown bluetooth bluetooth /dev/ttyHS0
     chmod 0600 /dev/ttyHS0
