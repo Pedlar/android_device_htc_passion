@@ -32,12 +32,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=15 \
     ro.ril.hsxpa=2 \
-    ro.ril.gprsclass=10
+    ro.ril.gprsclass=10 \
+    ro.media.dec.jpeg.memcap=20000000
 
 # Default network type.
 # 0 => WCDMA preferred.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.default_network=3 #0
+    ro.telephony.default_network=3 #0 #bravo uses 3, it works for them, Why was it set to cdma?
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -49,10 +50,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=48m
 
 #Disable HWAccel for now
-ADDITIONAL_BUILD_PROPERTIES += \
-    ro.config.disable_hw_accel=true
+#ADDITIONAL_BUILD_PROPERTIES += \
+#    ro.config.disable_hw_accel=true
 
-#tryout ril workaround
+#tryout ril workaround #i dont even know if we use v3
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.telephony.ril.v3=skipbrokendatacall
 

@@ -38,15 +38,15 @@ PRODUCT_PACKAGES += \
     libext2_com_err libext2_profile libext2_blkid libext2_e2p libext2_uuid libext2fs
 
 #Get eng stuff on our userdebug builds
-    # Turn on checkjni for non-user builds.
+# Turn on checkjni for non-user builds.
 ADDITIONAL_BUILD_PROPERTIES += ro.kernel.android.checkjni=1
-    # Set device insecure for non-user builds.
+# Set device insecure for non-user builds.
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
-    # Allow mock locations by default for non user builds
+# Allow mock locations by default for non user builds
 ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=1
-    # Disable visual strict mode, even on eng builds
+# Disable visual strict mode, even on eng builds
 PRODUCT_DEFAULT_PROPERTY += persist.sys.strictmode.visual=0
-
+# USB
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
 
